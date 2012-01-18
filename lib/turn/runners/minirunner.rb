@@ -67,6 +67,8 @@ module Turn
         @turn_case.new_test(test)
       end
 
+      return 0, 0 if @turn_case.size == 0
+
       turn_reporter.start_case(@turn_case)
 
       header = "#{type}_suite_header"
